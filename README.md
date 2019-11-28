@@ -38,14 +38,14 @@ The training loss we obtained with this network is shown in the plot on the righ
 
 After almost 70 epochs, we have obtained the minimum 0.162 loss on validation data, F-score goes up to 0.45 during training. As we can see, the validation error decreases with the decrease of training error – our network learns good generalized properties.
 
-![netpic](netpic.png)
+<img src="netpic.png" width="500">
 
 ### Parameters optimization process
 While looking for a good properties of network, we developed a large amount of nets with different convolution/kernel sizes and depths, also using different strides.
 
 The first thing we noticed was that regularization is crucial to obtain good results. Below is a plot of training and validation losses for one of our nets without using L2 generalization. It shows that the network barely learns anything.
 
-![netpic](netpic2.png)
+<img src="netpic2.png" width="500">
 
 After finding a network architecture that performed well on the data, we tried different output dimensions for the convolutional and fully connected layers. After several iterations we ended up with a well-performing net, using the parameters described above. Especially the 1x1 convolution for dimensionality reduction enabled us to have greater depth while not worsening the loss. Deeper or ‘shallower’ nets did not perform as well as the one presented above.
 
